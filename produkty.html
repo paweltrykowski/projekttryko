@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj sobie nazwe jaka chcesz</title>
+</head>
+<body>
+    <div id="strona">
+   <a href="fima.html"><h1>Strona główna</h1></a> <a href="Ofirmie.html"><h1>O firmie</h1></a><a href="produkty.html"><h1>Nasze prodkuty</h1></a>
+   <div id="div12">
+    <svg width="800px" height="600px">
+        <image href="zdjecie3.jpg" width="800px" height="600px" />
+      </svg>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kontakt</title>
+</head>
+<body>
+
+    <h1>halo</h1>
+<div id="div1">
+   <a href="fima.html"><h1>Strona główna</h1></a> </div>   <div id="div2">  <a href="Ofirmie.html"><h1>O firmie</h1></a>       </div>          <div id="div3">  <a href="produkty.html"><h1>Nasze prodkuty</h1></a></div><div id="div4"><a href="kontakt.php"><h1>Kontakt</h1></a></div>
+   
+
+<div id="kontakt">
+
+    <form action="kontakt.php" method="post"> 
+    <input type="text" name="Imie" placeholder="Imie*"><br>
+    <input type="text"name="nazwisko" placeholder="nazwisko"><br>
+    <input type="text"  name="mail" placeholder="E-mail*"><br>
+    <input type="text" name="numer" placeholder="Numer telefonu*"><br>
+    <input type="text " name="wiad" placeholder="Wiadomość*"><br>
+    <input type="reset" value="Wyczyść"><input type="submit" value="Wyślij">
+
+     <p>Zaznaczenie tego pola oznacza, że rozumiesz i akceptujesz, że przesłane przez Ciebie informacje <br>
+     będą przechowywane i przeglądane zgodnie z naszą Polityką Prywatności.</p>
+
+ <p> <input type="checkbox" name=""> Tak, rozumiem i akceptuję, że moje dane będą przechowywane.</p>
+
+
+ <?php
+
+
+$imie = $_POST['imie'];
+$nazwisko =$_POST['nazwisko'];
+$mail = $_POST['mail'];
+$numer = $_POST['numer'];
+
+
+
+
+
+$con = mysqli_connect('localhost', 'root', '', 'Firma');
+$zap = $mysqli_query($con,"SELECT `Imie`,`Nazwisko`,`E-mail`,`Numer Telefonu` FROM `projekt1` WHERE `Numer Telefonu`='555555555';
+");
+$wyn = $mysqli_fetch_row($zap)
+
+while($wyn){
+
+
+    
+echo($imie[0].$nazwisko[1].$mail[2].$mail[3].$numer[4])
+$wyn = $mysqli_fetch_row($zap)
+}
+
+
+
+$mysqli_close($con)
+?>
+ </form>
+
+ </body>
+</html>
